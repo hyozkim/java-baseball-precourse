@@ -5,12 +5,9 @@
 
 ### 기능 단위 Commit 리스트
 - [x] `init` 요구사항 및 기능 단위 Commit List ReadMe.md 작성 (Angular JS Commit Convention)
-- [ ] `input` 야구 게임 입력 개발
-- [ ] `select` 야구 게임 임의의 수 선택 개발
-- [ ] `play` 야구 게임 일치 여부 확인 개발
+- [ ] `random` 컴퓨터 숫자 3개 선택
+- [ ] `play` 사용자 입력 & 일치 여부 확인 & 게임 종료
 - [ ] `exception` Exception 처리 점검
 - [ ] `test` TC 작성 및 실행
-
-
 
 
