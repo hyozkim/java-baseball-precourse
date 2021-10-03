@@ -1,7 +1,13 @@
 package baseball;
 
+import baseball.service.BaseBallGame;
+import baseball.service.Pitcher;
+
+import java.util.HashSet;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO 숫자 야구 게임 구현
+        // 야구 게임 시작
+        BaseBallGame.start(new Pitcher(new HashSet<>()));
     }
 }
