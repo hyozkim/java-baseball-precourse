@@ -7,6 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.MockedStatic;
 
+import static baseball.common.Constant.MAX_LENGTH;
 import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mockStatic;
 
@@ -23,7 +24,7 @@ public class ApplicationTest extends NSTest {
                     .when(() -> Randoms.pickNumberInRange(anyInt(), anyInt()))
                     .thenReturn(1, 3, 5);
             running("12345");
-            verify("숫자는 최대 3자 입력할 수 있습니다.");
+            verify("숫자는 3자로 입력되어야 합니다.");
         }
     }
 

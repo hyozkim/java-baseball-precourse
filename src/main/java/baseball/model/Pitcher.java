@@ -2,29 +2,26 @@ package baseball.model;
 
 import nextstep.utils.Randoms;
 
-import java.util.List;
+import static baseball.common.Constant.*;
 
-public class Pitcher {
-    private List<Integer> pitchNumberList;
+public class Pitcher extends Player {
 
-    private static final int MAX_LENGTH = 3;
-    private static final int START_NUMBER = 1;
-    private static final int END_NUMBER = 9;
-
-    public Pitcher(List<Integer> pitchNumberList) {
-        this.pitchNumberList = pitchNumberList;
-    }
+    public Pitcher() {}
 
     public void pitch() {
-        while( pitchNumberList.size() < MAX_LENGTH ) {
-            int randomNumber = Randoms.pickNumberInRange(START_NUMBER, END_NUMBER);
-            if( !pitchNumberList.contains(randomNumber) ) {
-                pitchNumberList.add(randomNumber);
-            }
-        }
+        createNoneDuplicateNumber();
     }
 
-    public List<Integer> getBalls() {
-        return pitchNumberList;
+    private int createNumber() {
+        return Randoms.pickNumberInRange(START_NUMBER, END_NUMBER);
+    }
+
+    private void createNoneDuplicateNumber() {
+        while( this.numberList.size() < MAX_LENGTH ) {
+            int n = createNumber();
+            if( !this.numberList.contains(n) ) {
+                this.numberList.add(n);
+            }
+        }
     }
 }
